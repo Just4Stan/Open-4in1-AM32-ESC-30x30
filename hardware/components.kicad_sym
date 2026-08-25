@@ -60,6 +60,24 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "NSG2065Q"
+			(at 0 -15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "WXNSIC"
+			(at 0 -12.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(property "ki_keywords" "C41414478"
 			(at 0 0 0)
 			(effects
@@ -1219,6 +1237,24 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "TLV76733DRVR"
+			(at 0 -17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 -15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(property "ki_keywords" "C2848334"
 			(at 0 0 0)
 			(effects
@@ -1429,6 +1465,24 @@
 		)
 		(property "LCSC" "C2058245"
 			(at 0 -20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "INA186A3IDCKR"
+			(at 0 -25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 -22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1690,6 +1744,24 @@
 		)
 		(property "LCSC" "C160407"
 			(at 0 -27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "SM08B-SRSS-TB(LF)(SN)"
+			(at 0 -33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "JST"
+			(at 0 -30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
