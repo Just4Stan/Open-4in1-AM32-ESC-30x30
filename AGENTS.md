@@ -172,7 +172,7 @@ geometry, not scratch: do not tidy it away.
 
 | Rev | Date | Change |
 |---|---|---|
-| Rev3.3 | 2026-08-25 | Export `OpenESC-30x30-rev3.3`, current. Silkscreen rebranded OpenDrone -> incutec (incl. back silk text); rev text pipeline-synced. Bulk bank moved from 52 x 10 uF (Samsung CL31B106KBHNNNE) to 52 x 4.7 uF 50 V X7R 1206 (FH 1206B475K500NT, C29823). Via count 1702 (was 1453), 909 in-pad, after the final stitching pass. |
+| Rev3.3 | 2026-08-25 | Export `OpenESC-30x30-rev3.3`, current. Silkscreen rebranded OpenDrone -> incutec (incl. back silk text); rev text pipeline-synced. Bulk bank moved from 52 x 10 uF (Samsung CL31B106KBHNNNE) to 52 x 4.7 uF 50 V X7R 1206 (CCTC TCC1206X7R475K500HT, C380366; was FH C29823 until 2026-08-26, swapped for LCSC retail price after the move off JLCPCB assembly). Via count 1702 (was 1453), 909 in-pad, after the final stitching pass. |
 | Rev3.2 | 2026-08-22 | Export `OpenESC-30x30-rev3.2`. Matched input network at the current-sense amplifier (R89/R90 1k, C40/C41 100n 50V, C42 1u) against the high-side common-mode feedthrough measured on the 20x20 sibling. Scale unchanged, 10 mV/A. |
 | Rev3.1 | 2026-08-14 | Export `30x30-Rev3.1`, current. Bulk bank: 52 x 10 uF 1206 on +BATT/GND, 49 of them PCB-only (only C2, C3, C6 are in the schematic; 24 added since rev3). Board setup on the line standard. |
 | Rev3 | 2026-08-11 | Input clamp diodes D1-D3 removed, C2 and C3 doubled. |

@@ -6748,7 +6748,7 @@
 
 (property "Description" "Unpolarized capacitor" (at 78.74 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C29823" (at 78.74 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "LCSC" "C380366" (at 78.74 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Farnell" "" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -6758,9 +6758,9 @@
 
 (property "Cost" "" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Manufacturer" "FH" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Manufacturer" "CCTC" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "MPN" "1206B475K500NT" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "a496812d-8ecb-4ecb-af81-dbdff53634ab")) (pin "1" (uuid "999d1c8a-771a-4b62-9142-d98f531015f3")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81" (reference "C2") (unit 1))))) 
+(property "MPN" "TCC1206X7R475K500HT" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "a496812d-8ecb-4ecb-af81-dbdff53634ab")) (pin "1" (uuid "999d1c8a-771a-4b62-9142-d98f531015f3")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81" (reference "C2") (unit 1))))) 
 
 (symbol (lib_id "components:XRIM160808SR47MBCD") (at 93.98 132.08 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "31ada59d-4661-4ab7-8ac6-9ce4208a35b5") 
 
@@ -7178,7 +7178,7 @@
 
 (property "Description" "Unpolarized capacitor" (at 64.77 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C29823" (at 64.77 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "LCSC" "C380366" (at 64.77 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Farnell" "" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -7188,9 +7188,9 @@
 
 (property "Cost" "" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Manufacturer" "FH" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Manufacturer" "CCTC" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "MPN" "1206B475K500NT" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "9df580e3-96c4-4532-a3c8-cbcef0984166")) (pin "1" (uuid "d00e34a6-18b0-4a55-ae6d-0ca283e7a30b")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81" (reference "C6") (unit 1))))) 
+(property "MPN" "TCC1206X7R475K500HT" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "9df580e3-96c4-4532-a3c8-cbcef0984166")) (pin "1" (uuid "d00e34a6-18b0-4a55-ae6d-0ca283e7a30b")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81" (reference "C6") (unit 1))))) 
 
 (symbol (lib_id "power:+3V3") (at 205.74 137.16 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "a5aef1f7-c146-4218-92f3-d1837bae8d01") 
 
@@ -7482,7 +7482,7 @@
 
 (property "Description" "Unpolarized capacitor" (at 92.71 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C29823" (at 92.71 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "LCSC" "C380366" (at 92.71 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Farnell" "" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -7492,9 +7492,9 @@
 
 (property "Cost" "" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Manufacturer" "FH" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Manufacturer" "CCTC" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "MPN" "1206B475K500NT" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "830e0899-5023-4706-bbb7-45feb0e18fd6")) (pin "1" (uuid "a1132d5b-d77b-4e7a-ba86-c97fe6f8340f")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81" (reference "C3") (unit 1))))) 
+(property "MPN" "TCC1206X7R475K500HT" (at 0 0 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "830e0899-5023-4706-bbb7-45feb0e18fd6")) (pin "1" (uuid "a1132d5b-d77b-4e7a-ba86-c97fe6f8340f")) (instances (project "4in1" (path "/612d09d9-c556-41af-8a15-92be360f8e81" (reference "C3") (unit 1))))) 
 
 (symbol (lib_id "components:INA186A3IDCKR") (at 348.615 140.97 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "f2b1e88a-6564-49b2-a51e-95df04d4872d") 
 

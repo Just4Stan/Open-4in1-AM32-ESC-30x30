@@ -236,7 +236,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -408,7 +408,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1564,7 +1564,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1730,7 +1730,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1896,7 +1896,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2062,7 +2062,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2228,7 +2228,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2394,7 +2394,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2890,7 +2890,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3056,7 +3056,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3571,7 +3571,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3737,7 +3737,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3903,7 +3903,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6629,7 +6629,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6795,7 +6795,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6961,7 +6961,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7394,7 +7394,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7560,7 +7560,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7726,7 +7726,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7892,7 +7892,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8744,7 +8744,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8910,7 +8910,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9419,7 +9419,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10245,7 +10245,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10754,7 +10754,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13291,7 +13291,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13787,7 +13787,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14129,7 +14129,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14295,7 +14295,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14461,7 +14461,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14627,7 +14627,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14793,7 +14793,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14959,7 +14959,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15125,7 +15125,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15465,7 +15465,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15631,7 +15631,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16476,7 +16476,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16642,7 +16642,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16808,7 +16808,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16974,7 +16974,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17140,7 +17140,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17478,7 +17478,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17987,7 +17987,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18153,7 +18153,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18319,7 +18319,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18485,7 +18485,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18651,7 +18651,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18817,7 +18817,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19582,7 +19582,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20084,7 +20084,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20250,7 +20250,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20746,7 +20746,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20912,7 +20912,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21078,7 +21078,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21574,7 +21574,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21740,7 +21740,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21906,7 +21906,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22072,7 +22072,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22568,7 +22568,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23064,7 +23064,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23230,7 +23230,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23746,7 +23746,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24572,7 +24572,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25400,7 +25400,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25572,7 +25572,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26398,7 +26398,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27083,7 +27083,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27249,7 +27249,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27745,7 +27745,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28241,7 +28241,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C29823"
+		(property "LCSC" "C380366"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
