@@ -109,8 +109,8 @@ full scale.
 | Function | Ref | Part | LCSC | Note |
 |---|---|---|---|---|
 | Motor MCU, x4 | U2, U5, U7, U9 | AT32F421G8U7, QFN-28 | C2765098 | One per channel |
-| Gate driver, x4 | U4, U6, U8, U10 | NSG2065Q, QFN-24 | C41414478 | FD6288Q compatible, integrated diodes |
-| Power MOSFET, x24 | Q1-Q24 | SP40N01GHNK, PDFN-8L 5x6 | C22385416 | 6 per channel. Two alternates, neither fitted: XRS280N03C (C50314140), a selected drop-in successor; TPHR8504PL (C22388172), Toshiba SOP Advance, 40 V, RDS(on) 0.85 mOhm max at VGS 10 V against 1.5, but EAS 336 mJ against 1089 mJ, so it trades conduction loss for a weaker avalanche backstop |
+| Gate driver, x4 | U4, U6, U8, U10 | NSG2065Q, QFN-24 | C41414478 | FD6288Q compatible, integrated bootstrap diodes. Second sources: [KiCad-Library ALTERNATES.md](https://github.com/OpenDrone-hw/KiCad-Library/blob/main/ALTERNATES.md), "Three-phase gate driver, QFN-24 4x4" |
+| Power MOSFET, x24 | Q1-Q24 | SP40N01GHNK, PDFN-8L 5x6 | C22385416 | 6 per channel. Second sources, none fitted: [KiCad-Library ALTERNATES.md](https://github.com/OpenDrone-hw/KiCad-Library/blob/main/ALTERNATES.md), "Power MOSFET, DFN 5x6" |
 | Current sense amp | U12 | INA186A3IDCKR, SC-70-6 | C2058245 | 100 V/V, board level high side |
 | Current shunt, x2 parallel | Rsense1, Rsense2 | 0.2 mOhm 2512 | C695806 | 0.1 mOhm combined |
 | Buck | U13 | LMR54406DBVR, SOT-23-6 | C5219316 | 1.1 MHz, 0.6 A; FB 115k/10k against 0.8 V for 10.0 V out |
