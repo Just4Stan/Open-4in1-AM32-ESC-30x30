@@ -1,28 +1,24 @@
 # OpenESC-30x30
 
-Open source 4-in-1 BLDC ESC, 30.5 x 30.5 mm mounting pattern. Four fully
-independent channels, each with its own MCU, gate driver and six MOSFETs: the
-distributed-MCU AM32 topology, not a single shared MCU. Control is DShot over
-the standard 8-pin connector.
+Open-Source 4-in-1 sensorless BLDC motor Electronic Speed Controller (ESC), 30.5
+x 30.5 mm mounting pattern (FPV Drone standard). Part of OpenDrone by Incutec
+product lineup.
 
 ## Repo
 
-| | |
+| Maintainer | @Just4Stan (Discord: juststan_) |
 |---|---|
-| Maintainer | @Just4Stan |
-| Status | See the `status-*` topic on the repo. Never written here. |
+| Status | See the `status-*` topic on the repo. |
 | Designed in | KiCad 10 |
 | KiCad project | `hardware/4in1.kicad_pro` |
 | Root schematic | `hardware/4in1.kicad_sch` (power, current sense, connector) plus `hardware/ESC.kicad_sch`, one channel instantiated 4x |
-| Board | `hardware/4in1.kicad_pcb`, 6 layers, 1.6 mm, 2 oz outer copper (the stackup field reads 1.69 mm; JLC ships 1.6) |
+| Board | `hardware/4in1.kicad_pcb`, 6 layers, 1.6 mm, 2 oz outer copper, 1 oz inner copper. |
 | Fixtures | [OpenDrone-Fixtures](https://github.com/OpenDrone-hw/OpenDrone-Fixtures): `OpenESC-30x30-QC/` press-contact QC fixture, `OpenESC-30x30-Flashing/` ST-LINK pogo-pin jig, both unrouted |
-| Production panel | `hardware/4in1-panel.kicad_pcb`, carries this board **and** the OpenESC-20x20, not a panel of this board alone |
-| Fab exports | `hardware/production/`, Fabrication Toolkit sets named by revision |
 | Local library | `hardware/components.kicad_sym`, `hardware/4in1ESC-30x30.pretty/`, `hardware/4in1ESC-30x30.3dshapes/`. Frozen pre-consolidation libraries: use them, do not add to them |
-| Shared library | [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), catalogue only; every library this board uses is local to the repo |
+| Shared library | OpenDrone-hw/KiCad-Library, Contains all components used on produced (Alpha onwards) hardware. Work in local library and migrate to shared library once component selection is fixed. |
 | Design rules | `hardware/4in1.kicad_dru` |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
-| Board setup | Line standard: 6 layers, 0.09 mm clearance and track, via 0.35 on 0.20 drill |
+| Board setup | 6 layers, 0.09 mm clearance and track, 0.16mm on outer layers (2 oz), via 0.35 on 0.20 drill |
 | License | CERN-OHL-S-2.0 |
 
 The project is named `4in1`, not after the repo. Renaming it would break the
@@ -62,14 +58,8 @@ kicad-cli pcb drc --schematic-parity --refill-zones --exit-code-violations hardw
 kicad-cli sch export netlist --format kicadsexpr -o /tmp/4in1.net hardware/4in1.kicad_sch
 ```
 
-`--refill-zones` stops stale fills inventing clearance errors. Keep
-`--schematic-parity` on, but read its output against Layout rules below: the
-board-only bulk bank makes parity noisy, and a real error hides easily in it.
-
-On macOS `kicad-cli` is at
-`/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, and `pcbnew` imports
-only under KiCad's bundled Python. Shared scripts (renders, STEP export,
-packaging art) live in `OpenDrone-Scripts`.
+Shared scripts (renders, STEP export, packaging art) live in OpenDrone-Scripts;
+board-specific scripts live in hardware/tools/.
 
 ## Architecture
 
@@ -78,60 +68,39 @@ an **AT32F421G8U7** (Cortex-M4, QFN-28) drives an **NSG2065Q** three-phase
 half-bridge gate driver, which drives six **SP40N01GHNK** MOSFETs, two per
 phase. One channel is drawn once in `ESC.kicad_sch` and instantiated four times.
 
-Current sensing is **board level, not per channel**: a single INA186A3IDCKR at
-100 V/V sits across two 0.2 mOhm 2512 shunts in parallel, 0.1 mOhm total, in the
+Current sensing is **board level, not per motor**: a single INA186A3IDCKR at 100
+V/V sits across two 0.2 mOhm 2512 shunts in parallel, 0.1 mOhm total, in the
 +BATT feed. That gives 10 mV/A and roughly 330 A full scale against a 3.3 V ADC,
 reported as `/CURR`.
-
-**Rev3.2 adds a matched input network at the amplifier**: 1 k in each sense
-leg (R89/R90), 100 nF 50 V from each input to ground (C40/C41) and 1 uF
-across the inputs (C42). Through rev3.1 the bare high-side connection put
-both amplifier inputs on the switching bus, and the common-mode feedthrough
-rectified to a duty-dependent offset: measured on the 20x20 sibling
-2026-08-21 (identical topology), errors from +164% to -64% across the
-throttle range, honest only at 100% where AM32 stops chopping. The network
-attenuates the common-mode at the pins ~300x and the mismatch-converted
-differential to 2.8 mVpp worst case (SPICE, 1% R / 10% C opposed); scale is
-unchanged at 10 mV/A. Not yet verified on hardware: the acceptance test is
-the ESC-04 mid-throttle i_a-versus-clamp sweep on a rev3.2 board. Evidence
-for the rev3.1 fault: OpenESC-20x20 AGENTS.md and
-`OpenDrone-Testing/Logs/esc-04-20x20-20260821T150430Z/`.
-
-**There is no input protection.** The three clamp diodes (D1-D3) that earlier
-revisions carried are gone: their 24 V standoff sits below the 33.6 V an 8S pack
-reaches, so they were removing themselves. 2S-8S is qualified by bench and
-flight testing, not by a clamp. The practical envelope is set by the MOSFET
-(40 V VDSS), the buck (36 V rated, 45 V absolute maximum) and the current-sense
-full scale.
 
 ## Key parts
 
 | Function | Ref | Part | LCSC | Note |
 |---|---|---|---|---|
 | Motor MCU, x4 | U2, U5, U7, U9 | AT32F421G8U7, QFN-28 | C2765098 | One per channel |
-| Gate driver, x4 | U4, U6, U8, U10 | NSG2065Q, QFN-24 | C41414478 | FD6288Q compatible, integrated bootstrap diodes. Second sources: [KiCad-Library ALTERNATES.md](https://github.com/OpenDrone-hw/KiCad-Library/blob/main/ALTERNATES.md), "Three-phase gate driver, QFN-24 4x4" |
-| Power MOSFET, x24 | Q1-Q24 | SP40N01GHNK, PDFN-8L 5x6 | C22385416 | 6 per channel. Second sources, none fitted: [KiCad-Library ALTERNATES.md](https://github.com/OpenDrone-hw/KiCad-Library/blob/main/ALTERNATES.md), "Power MOSFET, DFN 5x6" |
+| Gate driver, x4 | U4, U6, U8, U10 | NSG2065Q, QFN-24 | C41414478 | Standard footprint, many alternatives exist. |
+| Power MOSFET, x24 | Q1-Q24 | SP40N01GHNK, PDFN-8L 5x6 | C22385416 | 40 V, 6 per channel. Standard 5x6 DFN footprint, many alternatives exist. |
 | Current sense amp | U12 | INA186A3IDCKR, SC-70-6 | C2058245 | 100 V/V, board level high side |
 | Current shunt, x2 parallel | Rsense1, Rsense2 | 0.2 mOhm 2512 | C695806 | 0.1 mOhm combined |
 | Buck | U13 | LMR54406DBVR, SOT-23-6 | C5219316 | 1.1 MHz, 0.6 A; FB 115k/10k against 0.8 V for 10.0 V out |
 | Buck inductor | U14 | FTC160808S4R7MBCA | C46594347 | 4.7 uH |
 | LDO | U15 | TLV76733DRVR, WSON-6 | C2848334 | +10 V to +3V3 |
-| Connector | J1 | SM08B-SRSS-TB, JST SH 8-pin | C160407 | Also broken out as solder pads (U3) |
-| Bulk electrolytic, supplied | n/a | 470 uF | | Shipped with the board, not fitted to it. The user solders it across the battery terminals. Standard pairing of on-board ceramics with a pack-side elco; it dominates the bus capacitance once installed |
+| Connector | J1 | SM08B-SRSS-TB, JST SH 8-pin | C160407 | Also broken out as solder pads. |
+| Bulk electrolytic. | / | 470 uF 50V | / | To be installed on the battery connector by the user. |
+| Bulk ceramic | fix | fix | fix | 52 x 10 uF 1206 |
 
 ## Power
 
 ```
+Battery + (2S-8S) ─► 0.1mOhm shunt ─► +BATT
 +BATT ─┬─► MOSFET drains, motor phases
-       ├─► shunt pair ─► INA186A3 (U12) ─► /CURR
-       └─► LMR54406DBVR buck (U13) + 4.7uH (U14) ─► +10V ─┬─► gate drivers U4/U6/U8/U10
-                                                          └─► TLV76733DRVR (U15) ─► +3V3 ─► 4x MCU, INA186
+       └─► LMR54406DBVR buck ─► +10V ─┬─► 4x gate driver
+                                      └─► TLV76733DRVR ─► +3V3 ─► 4x MCU, INA186
 ```
 
 ## Connectors and I/O
 
-8-pin JST SM08B-SRSS-TB (J1). The same eight signals are broken out as solder
-pads (U3). Connector ground returns on pads P1 and P2.
+Betaflight Standard:
 
 | Pin | Net | Function |
 |---|---|---|
@@ -150,33 +119,25 @@ over bidirectional extended DShot instead.
 
 ## Firmware
 
-[AM32](https://github.com/am32-firmware/AM32), one independent target per
-channel. Boards ship with the AM32 bootloader pre-loaded; firmware is flashed
-and configured in-browser at [am32.ca](https://am32.ca). The AT32F421 plus
-NSG2065Q per-channel topology is the standard AM32 hardware target for this
-board class, so it works with Betaflight and any other DShot-capable flight
-controller.
+AM32 first needs a boatloader loaded using an ST-LINK
+(AM32_F421_BOOTLOADER_PB4_V19.hex) firmware is flashed and configured in-browser
+at am32.ca. Works with Betaflight and any other DShot-capable flight controller.
 
 ## Layout rules
 
 Bulk decoupling on +BATT and GND exists on the PCB without matching schematic
-symbols. That is a deliberate board-only bank, and it is why DRC parity reports
-are noisy here. Do not run update-from-schematic without checking what it would
-delete.
-
-The board outline follows the scalloped pad edges of the solder-pad breakout
-footprint (U3). The extent past the 30.5 mm mounting square is real outline
-geometry, not scratch: do not tidy it away.
+symbols. That is a deliberate board-only bank. Do not run update-from-schematic
+without checking what it would delete.
 
 ## Revisions
 
 | Rev | Date | Change |
 |---|---|---|
-| Rev3.3 | 2026-08-25 | Export `OpenESC-30x30-rev3.3`, current. Silkscreen rebranded OpenDrone -> incutec (incl. back silk text); rev text pipeline-synced. Bulk bank moved from 52 x 10 uF (Samsung CL31B106KBHNNNE) to 52 x 4.7 uF 50 V X7R 1206 (CCTC TCC1206X7R475K500HT, C380366; was FH C29823 until 2026-08-26, swapped for LCSC retail price after the move off JLCPCB assembly). Via count 1702 (was 1453), 909 in-pad, after the final stitching pass. |
-| Rev3.2 | 2026-08-22 | Export `OpenESC-30x30-rev3.2`. Matched input network at the current-sense amplifier (R89/R90 1k, C40/C41 100n 50V, C42 1u) against the high-side common-mode feedthrough measured on the 20x20 sibling. Scale unchanged, 10 mV/A. |
-| Rev3.1 | 2026-08-14 | Export `30x30-Rev3.1`, current. Bulk bank: 52 x 10 uF 1206 on +BATT/GND, 49 of them PCB-only (only C2, C3, C6 are in the schematic; 24 added since rev3). Board setup on the line standard. |
-| Rev3 | 2026-08-11 | Input clamp diodes D1-D3 removed, C2 and C3 doubled. |
-| Rev1 | 2026-06-05 | Validated build. Fab sets `Rev1-30x30` and `Rev1-30x3020x20`, the latter combined with OpenESC-20x20. |
+| Rev3.3 | 2026-08-25 | Export `OpenESC-30x30-rev3.3. `Silkscreen rebranded OpenDrone -> incutec for export restriction reasons on flagging anything containing 'Drone'. First Incutec production run. |
+| Rev3.2 | 2026-08-22 | Export `OpenESC-30x30-rev3.2`. Matched input network at the current-sense amplifier (R89/R90 1k, C40/C41 100n 50V, C42 1u) against the high-side common-mode feedthrough. |
+| Rev3.1 | 2026-08-14 | Export `30x30-Rev3.1` |
+| Rev3 | 2026-08-11 | Input clamp diodes D1-D3 removed, TVS diodes offer no protection when rail voltage is this close to the MOSFET Vds. |
+| Rev1 | 2026-06-05 | Validated build. 15 pieces ordered by Incutec. |
 | V0.4 | 2026-05-29 | Combined export `V0.4-20x20-30x30`. |
 | V0.3 | 2026-05-06 | Export `V0.3`; combined `V0.3-20x20-30x30` on 2026-05-12. |
 | V0.2 | 2026-05-05 | Export `V0.2`. |
