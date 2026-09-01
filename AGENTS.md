@@ -87,7 +87,7 @@ reported as `/CURR`.
 | LDO | U15 | TLV76733DRVR, WSON-6 | C2848334 | +10 V to +3V3 |
 | Connector | J1 | SM08B-SRSS-TB, JST SH 8-pin | C160407 | Also broken out as solder pads. |
 | Bulk electrolytic. | / | 470 uF 50V | / | To be installed on the battery connector by the user. |
-| Bulk ceramic | fix | fix | fix | 52 x 10 uF 1206 |
+| Bulk ceramic | See PCB | 4.7 uF 1206, X5R 50 V | C380366 | 52 fitted |
 
 ## Power
 
