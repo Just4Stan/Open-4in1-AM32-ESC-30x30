@@ -15,7 +15,7 @@ product lineup.
 | Board | `hardware/4in1.kicad_pcb`, 6 layers, 1.6 mm, 2 oz outer copper, 1 oz inner copper. |
 | Fixtures | [OpenDrone-Fixtures](https://github.com/OpenDrone-hw/OpenDrone-Fixtures): `OpenESC-30x30-QC/` press-contact QC fixture, `OpenESC-30x30-Flashing/` ST-LINK pogo-pin jig, both unrouted |
 | Local library | `hardware/components.kicad_sym`, `hardware/4in1ESC-30x30.pretty/`, `hardware/4in1ESC-30x30.3dshapes/`. Frozen pre-consolidation libraries: use them, do not add to them |
-| Shared library | OpenDrone-hw/KiCad-Library, Contains all components used on produced (Alpha onwards) hardware. Work in local library and migrate to shared library once component selection is fixed. |
+| Shared library | `hardware/KiCad-Library/`, pinned submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), nickname `OpenDrone`; 3D models and exact component datasheets resolve through `OPENDRONE_LIB` |
 | Design rules | `hardware/4in1.kicad_dru` |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
 | Board setup | 6 layers, 0.09 mm clearance and track, 0.16mm on outer layers (2 oz), via 0.35 on 0.20 drill |
@@ -37,12 +37,12 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
   value that changes the circuit.
 - **Close KiCad before any write to a KiCad file.** KiCad caches library tables
   at process start and overwrites files on save.
-- **Reuse before you draw.** Check
-  [KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) and its
+- **Reuse before you draw.** Check the `OpenDrone` library and its
   `PARTS-USED.md` first. If the part is there we have already sourced,
-  footprinted and shipped it: copy the symbol and footprint into this repo's
-  `lib` library and use it. Draw a new part only when the library has nothing
-  that fits, and import it with `easyeda2kicad` from its LCSC number.
+  footprinted and shipped it, and its symbol links to the exact committed
+  datasheet: place it from `OpenDrone`. Draw a new part only when the catalogue
+  has nothing that fits, and import it with `easyeda2kicad` from its LCSC
+  number. Pulling a newer catalogue is a deliberate, reviewed submodule commit.
 - **One person holds a board layout at a time.** KiCad files do not merge. Say
   on Discord that you are taking it. See [CONTRIBUTING.md](CONTRIBUTING.md).
 - **ERC and DRC clean before every pull request.** Commands below.
