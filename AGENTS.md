@@ -6,14 +6,15 @@ product lineup.
 
 ## Repo
 
-| Maintainer | @Just4Stan (Discord: juststan_) |
+| | |
 |---|---|
-| Status | See the `status-*` topic on the repo. |
+| Maintainer | @Just4Stan (Discord: juststan_) |
+| Status | See the `status-*` topic on the repo. Never written here. |
 | Designed in | KiCad 10 |
 | KiCad project | `hardware/4in1.kicad_pro` |
 | Root schematic | `hardware/4in1.kicad_sch` (power, current sense, connector) plus `hardware/ESC.kicad_sch`, one channel instantiated 4x |
 | Board | `hardware/4in1.kicad_pcb`, 6 layers, 1.6 mm, 2 oz outer copper, 1 oz inner copper. |
-| Fixtures | [OpenDrone-Fixtures](https://github.com/OpenDrone-hw/OpenDrone-Fixtures): `OpenESC-30x30-QC/` press-contact QC fixture, `OpenESC-30x30-Flashing/` ST-LINK pogo-pin jig, both unrouted |
+| Fixtures | [OpenDrone-Fixtures](https://github.com/OpenDrone-hw/OpenDrone-Fixtures): `OpenESC-30x30-QC/` press-contact QC fixture, `OpenESC-30x30-Flashing/` ST-LINK pogo-pin jig |
 | Local library | `hardware/components.kicad_sym`, `hardware/4in1ESC-30x30.pretty/`, `hardware/4in1ESC-30x30.3dshapes/`. Frozen pre-consolidation libraries: use them, do not add to them |
 | Shared library | `hardware/KiCad-Library/`, pinned submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), nickname `OpenDrone`; 3D models and exact component datasheets resolve through `OPENDRONE_LIB` |
 | Design rules | `hardware/4in1.kicad_dru` |
@@ -40,9 +41,11 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
 - **Reuse before you draw.** Check the `OpenDrone` library and its
   `PARTS-USED.md` first. If the part is there we have already sourced,
   footprinted and shipped it, and its symbol links to the exact committed
-  datasheet: place it from `OpenDrone`. Draw a new part only when the catalogue
-  has nothing that fits, and import it with `easyeda2kicad` from its LCSC
-  number. Pulling a newer catalogue is a deliberate, reviewed submodule commit.
+  datasheet: place it from `OpenDrone`. Draw a new part into `lib` only when
+  the catalogue has nothing that fits, imported with
+  `easyeda2kicad` from its LCSC number. Pulling a newer catalogue is a
+  deliberate, reviewed commit: `git submodule update --remote
+  hardware/KiCad-Library`, then DRC.
 - **One person holds a board layout at a time.** KiCad files do not merge. Say
   on Discord that you are taking it. See [CONTRIBUTING.md](CONTRIBUTING.md).
 - **Run ERC and DRC before every pull request.** Existing approved findings
@@ -60,9 +63,13 @@ kicad-cli pcb drc --schematic-parity --refill-zones hardware/4in1.kicad_pcb
 kicad-cli sch export netlist --format kicadsexpr -o /tmp/4in1.net hardware/4in1.kicad_sch
 ```
 
-Reusable scripts (renders, STEP export, packaging art) come from Incutec
-hardware tooling; the OpenDrone release standard lives in OpenDrone-hw/.github/RELEASES.md;
-board-specific scripts live in hardware/tools/.
+On macOS `kicad-cli` is at
+`/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, and `pcbnew` imports
+only under KiCad's bundled Python. Reusable scripts for renders, STEP export,
+and packaging art come from Incutec hardware tooling. The OpenDrone release
+standard is
+[RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md).
+Board-specific scripts, where a board has any, live in `hardware/tools/`.
 
 ## Architecture
 
@@ -122,9 +129,11 @@ over bidirectional extended DShot instead.
 
 ## Firmware
 
-AM32 first needs a boatloader loaded using an ST-LINK
-(AM32_F421_BOOTLOADER_PB4_V19.hex) firmware is flashed and configured in-browser
-at am32.ca. Works with Betaflight and any other DShot-capable flight controller.
+[AM32](https://github.com/am32-firmware/AM32). The bootloader
+(`AM32_F421_BOOTLOADER_PB4_V19.hex`) is loaded first with an ST-LINK; the
+firmware is then flashed and configured in-browser at
+[am32.ca](https://am32.ca). Works with Betaflight and any other DShot-capable
+flight controller.
 
 ## Layout rules
 
@@ -136,7 +145,7 @@ without checking what it would delete.
 
 | Rev | Date | Change |
 |---|---|---|
-| Rev3.3 | 2026-08-25 | Export `OpenESC-30x30-rev3.3. `Silkscreen rebranded OpenDrone -> incutec for export restriction reasons on flagging anything containing 'Drone'. First Incutec production run. |
+| Rev3.3 | 2026-08-25 | Export `OpenESC-30x30-rev3.3`. Silkscreen rebranded OpenDrone -> incutec for export restriction reasons on flagging anything containing 'Drone'. First Incutec production run. |
 | Rev3.2 | 2026-08-22 | Export `OpenESC-30x30-rev3.2`. Matched input network at the current-sense amplifier (R89/R90 1k, C40/C41 100n 50V, C42 1u) against the high-side common-mode feedthrough. |
 | Rev3.1 | 2026-08-14 | Export `30x30-Rev3.1` |
 | Rev3 | 2026-08-11 | Input clamp diodes D1-D3 removed, TVS diodes offer no protection when rail voltage is this close to the MOSFET Vds. |
